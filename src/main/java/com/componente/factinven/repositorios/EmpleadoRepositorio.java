@@ -5,13 +5,13 @@ import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.componente.factinven.entidades.Persona;
+import com.componente.factinven.entidades.Empleado;
 
 @Repository
-public interface PersonaRepositorio extends JpaRepository<Persona, Integer> {
+public interface EmpleadoRepositorio extends JpaRepository<Empleado, Integer> {
 
-	public Persona findByApellidos(String apellidos);
+	public Empleado findByPersonaApellidos(String apellidos);
 	
-	Page<Persona> findAll(Pageable pageable);
+	Page<Empleado> findAll(Pageable pageable);
 	
 }

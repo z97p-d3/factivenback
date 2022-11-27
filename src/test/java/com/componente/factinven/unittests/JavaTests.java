@@ -18,7 +18,7 @@ class JavaTests {
 	void test2() {
 		String name="andres";
 		name="Alejandro";
-		assertEquals("andres", name);
+		assertEquals("Alejandro", name);
 	}
 
 	

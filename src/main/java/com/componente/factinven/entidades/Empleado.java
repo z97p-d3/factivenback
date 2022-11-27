@@ -36,6 +36,8 @@ public class Empleado implements Serializable {
 	private Persona persona;
 	@Column(columnDefinition = "TIMESTAMP")
 	private LocalDateTime ingresoalaEmpresa;
-	@OneToOne(cascade = CascadeType.DETACH, fetch = FetchType.LAZY)
+	@OneToOne(cascade = CascadeType.DETACH, fetch = FetchType.EAGER)
 	private Almacen almacen;
+	
+	
 }

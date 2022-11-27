@@ -1,13 +1,14 @@
 package com.componente.factinven.entidades;
 
 import java.io.Serializable;
-import java.math.BigDecimal;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
+import javax.persistence.OneToOne;
 import javax.validation.constraints.NotNull;
 
 import lombok.AllArgsConstructor;
@@ -16,30 +17,23 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+
 @Entity
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-public class Articulo implements Serializable {
+public class Usuario implements Serializable {
 
-	private static final long serialVersionUID = 4817564908740006879L;
+	private static final long serialVersionUID = 1869080843648181632L;
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int id;
-	@NotBlank
-	private String codigo;
-	@NotBlank
-	private String nombre;
 	@NotNull
-	private BigDecimal precio;
-	@NotBlank
+	@OneToOne(cascade = CascadeType.MERGE, fetch = FetchType.EAGER)
+	private Persona persona;
 	private String categoria;
-	@NotBlank
-	private int numeroExistencias;
-	private int numeroExistenciasMinimo;
-	@NotBlank
-	private String unidaddeMedida;
+	
 	
 }
