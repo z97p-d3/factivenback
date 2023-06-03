@@ -37,12 +37,10 @@ public class DetalleComprobante implements Serializable {
 	private int id;
 	@NotNull
 	private int unidad;
-	@NotNull
 	@ManyToOne(fetch = FetchType.LAZY)
 	private Articulo articulo;
 	@NotNull
 	private BigDecimal precioUnitario;
-	@NotNull
 	private BigDecimal precioporDetalle;
 	@NotNull
 	private int numeroDetalle;

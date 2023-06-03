@@ -22,6 +22,7 @@ public class ComprobanteResponse  implements Serializable {
 	private Integer idAlmacen;
 	private String formaPago;
 	private BigDecimal total;
+	private String nombreCliente;
 	
 	
 	

@@ -6,6 +6,7 @@ import org.springframework.data.domain.Page;
 
 import com.componente.factinven.dto.ComprobanteRequest;
 import com.componente.factinven.dto.ComprobanteResponse;
+import com.componente.factinven.dto.VentaResponse;
 
 public interface IComprobanteServicio {
 
@@ -21,7 +22,7 @@ public interface IComprobanteServicio {
 
 	public abstract  Page<ComprobanteResponse> listarComprobantes(int page, int size);
 	
-	public List<ComprobanteResponse> findAll();
+	public List<VentaResponse> findAll();
 	
 	public ComprobanteResponse findById(Integer id);
 }

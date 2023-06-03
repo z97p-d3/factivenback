@@ -9,7 +9,7 @@ import lombok.Data;
 public class VentaRequest  extends ComprobanteRequest {
 
 	private static final long serialVersionUID = 1028409979983251377L;
-	private List<DetalleVentaRequest> listDetalleVentaRequest= new ArrayList<>();
+	private List<DetalleVentaRequest> itemsFactura= new ArrayList<>();
 	
 	
 	

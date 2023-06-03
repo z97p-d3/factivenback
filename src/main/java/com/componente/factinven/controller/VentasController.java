@@ -66,8 +66,7 @@ public class VentasController {
 
 	@GetMapping("/venta")
 	public List<VentaResponse> listarTodos() {
-		//entaService.findAll();
-		return null;
+		return ventaService.findAll();
 	}
 	
 	

@@ -58,7 +58,7 @@ public class UnitVentaTests {
 		
 		List<DetalleVentaRequest> listaD= new ArrayList<>();
 		listaD.add(detalle);
-		ventita.setListDetalleVentaRequest(listaD);
+		ventita.setItemsFactura(listaD);
 		
 		
 		

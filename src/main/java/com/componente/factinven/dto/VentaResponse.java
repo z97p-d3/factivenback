@@ -32,6 +32,8 @@ public class VentaResponse extends ComprobanteResponse {
 		this.setFormaPago(venta.getFormaPago());
 	}
 
+	
+	public VentaResponse() {}
 	  
 
 }

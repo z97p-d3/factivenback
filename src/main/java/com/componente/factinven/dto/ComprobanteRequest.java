@@ -3,8 +3,11 @@ package com.componente.factinven.dto;
 import java.io.Serializable;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.ArrayList;
+import java.util.List;
 
 import lombok.Data;
+import lombok.ToString;
 
 
 @Data
@@ -21,8 +24,10 @@ public class ComprobanteRequest implements Serializable {
 	private Integer idAlmacen;
 	private String formaPago;
 	private BigDecimal total;
+	List<DetalleComprobanteRequest> listaDetalle = new ArrayList<>();
 	
 	@Data
+	@ToString
 	public class DetalleComprobanteRequest {
 		
 		private int productoId;
